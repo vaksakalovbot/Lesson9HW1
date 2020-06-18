@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson9HW1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-wD-v8M" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="40" y="40" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l38-A1-PX7">
+                                        <rect key="frame" x="8" y="16" width="224" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6t-gc-j2f">
+                                        <rect key="frame" x="8" y="45" width="224" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="l38-A1-PX7" secondAttribute="trailing" constant="8" id="7ex-wB-cAQ"/>
+                                    <constraint firstItem="h6t-gc-j2f" firstAttribute="leading" secondItem="1gP-wD-v8M" secondAttribute="leading" constant="8" id="SjS-sy-Rh1"/>
+                                    <constraint firstItem="h6t-gc-j2f" firstAttribute="top" secondItem="l38-A1-PX7" secondAttribute="bottom" constant="8" id="d9f-Qx-CCe"/>
+                                    <constraint firstItem="l38-A1-PX7" firstAttribute="leading" secondItem="1gP-wD-v8M" secondAttribute="leading" constant="8" id="joz-f6-6jY"/>
+                                    <constraint firstItem="l38-A1-PX7" firstAttribute="top" secondItem="1gP-wD-v8M" secondAttribute="top" constant="16" id="p3D-0C-5bM"/>
+                                    <constraint firstAttribute="width" secondItem="1gP-wD-v8M" secondAttribute="height" multiplier="1:1" id="weo-64-6yR"/>
+                                    <constraint firstAttribute="trailing" secondItem="h6t-gc-j2f" secondAttribute="trailing" constant="8" id="xAE-yo-45U"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sog-QM-h80" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="40" y="405" width="240" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Preset:">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="aminateButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="KhJ-v0-2dw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1gP-wD-v8M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="1xB-11-wqV"/>
+                            <constraint firstItem="Sog-QM-h80" firstAttribute="top" secondItem="1gP-wD-v8M" secondAttribute="bottom" constant="125" id="FhE-zB-zMH"/>
+                            <constraint firstItem="Sog-QM-h80" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JAe-9J-L0p"/>
+                            <constraint firstItem="1gP-wD-v8M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Pk5-Xa-wGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1gP-wD-v8M" secondAttribute="trailing" constant="40" id="xAc-GN-LUi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sog-QM-h80" secondAttribute="trailing" constant="40" id="yh1-qy-qlB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animationSpringButton" destination="Sog-QM-h80" id="JYa-Dy-tcZ"/>
+                        <outlet property="animationSpringView" destination="1gP-wD-v8M" id="M5i-8L-BvP"/>
+                        <outlet property="curveNameLabel" destination="h6t-gc-j2f" id="xuV-XC-rHB"/>
+                        <outlet property="presetNameLabel" destination="l38-A1-PX7" id="HoI-bi-Kpd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="137.32394366197184"/>
         </scene>
     </scenes>
 </document>
